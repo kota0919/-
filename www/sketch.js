@@ -1,27 +1,62 @@
 var startX = 0;
 var startY = 0;
-
+let startTime;
+const oneSec = 1000; //1秒
+//const oneMin = (oneSec/3600) / 60;
+//const oneHour = oneSec /3600; 
+let elapsedTime = 0; //経過時間値
+let count = 0; //秒数カウント
+let finishTime;
 
 function setup() {
 createCanvas(windowWidth,windowHeight);
 
+startTime = millis();
+textSize(30);
+
+stroke(255)
+background(204);
+
 
 }
 function draw() {
-  text("start",30,10);
-  text("GOAL",340,440);
+background(204);
+text(count + '秒経過',100,500);
+
+
+const now = millis();
+
+elapsedTime = now - startTime;
+if(elapsedTime >= oneSec){
+count++;
+startTIme = millis();
+}
+ else if 
+ (startX == 360 && startY == 400 ){
+   
+ }
+
+
+if (startX == 360 && startY == 400){
+  startX = 0;
+  startY = 0;
+}
+//if(){}
+//startX =0;
+//startY =0;
+
+
+  text("start",30,20);
+  text("GOAL",280,460);
 square(startX , startY, 20,20);
+
+
 stroke(0,0,255);
 line (40,40,0,40);   //左側のx,yと右側のx,y
-
 line(40,40,40,70);
-line
-
 line(70,0,70,40)
-
 line(100,70,40,70);
 line(100,70,100,30);
-
 line(100,30,140,30);
 line(140,30,140,100);
 line(140,100,220,100);
@@ -33,7 +68,6 @@ line(50,170,250,170);
 line(220,150,30,150);
 line(30,150,30,200);
 line(30,200,270,200);
-
 line(80,170,80,180);
 line(100,200,100,190);
 line(120,170,120,180);
@@ -41,7 +75,6 @@ line(140,200,140,190);
 line(160,170,160,180);
 line(180,200,180,190);
 line(200,170,200,180);
-
 line(270,200,270,250);
 line(250,170,300,170);
 line(300,170,300,280);
@@ -79,16 +112,17 @@ line(180,380,80,380);
 line(200,400,100,400);
 line(80,380,80,420);
 line(80,420,340,420);
+
 stroke(126);
 square(340,400, 40,30);
-fill(20);
+
+fill (220,20,0);
 
 
-fill (220,20,60);
 
-//if()
 
 }
+
 
 
 
