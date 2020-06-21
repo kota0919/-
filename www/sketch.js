@@ -1,5 +1,6 @@
 var startX = 0;
 var startY = 0;
+var a;
 let startTime;
 const oneSec = 1000; //1秒
 //const oneMin = (oneSec/3600) / 60;
@@ -31,24 +32,25 @@ if(elapsedTime >= oneSec){
 count++;
 startTIme = millis();
 }
- else if 
+if 
  (startX == 360 && startY == 400 ){
-   
+  text("GOAL",100,600);
  }
 
 
-if (startX == 360 && startY == 400){
-  startX = 0;
-  startY = 0;
-}
-//if(){}
+//if (startX == 360 && startY == 400){
+ // startX = 0;
+  //startY = 0;
+//}
+//if(a = ){}
 //startX =0;
 //startY =0;
 
-
-  text("start",30,20);
-  text("GOAL",280,460);
-square(startX , startY, 20,20);
+ fill(100);
+  text("S",30,30);
+  text("G",340,460);
+  fill(200);
+a = square(startX , startY, 20,20);
 
 
 stroke(0,0,255);
